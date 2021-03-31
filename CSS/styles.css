@@ -67,6 +67,11 @@ a:visited, a:link, a:active {
     grid-area: m;
     padding-left: 20px;
     width: fit-content;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas:   
+        'p'
+        'b';
 }
 
 label {
@@ -79,10 +84,12 @@ textarea {
 }
 
 .note * {
+    grid-area: p;
     vertical-align: top;
 }
 
 .savedelete {
+    grid-area: b;
     text-align: end;
 }
 
