@@ -1,16 +1,33 @@
-/* Plans to create functions in Note-ly app. */  
+
+const btn = document.querySelector('.theme-toggle');
+
+btn.addEventListener('click', function() {
+  document.body.classList.toggle('darkmode');  
+
+    if (btn.value == "DARK MODE") {
+        btn.style.color = '#e0def4';
+        btn.value = "LIGHT MODE";
+        btn.innerHTML = "LIGHT MODE";
+    }
+    else {
+        btn.style.color = '#232136';
+        btn.value = "DARK MODE";
+        btn.innerHTML = "DARK MODE";
+    }
+})
 
 
+/* Plans to create functions in Note-ly app. */ 
 
 // Function 1 - Dark Mode
 
-/*  - Change initial color scheme to be "light mode"
-    - Create a .darkmode class selector in CSS that change the color  
-        - this class should also change the button 
+/*  - Create a body.darkmode class selector in CSS that changes the color  
+    - Create a constant for the button by using querySelector 
     - Create a function that toggles between classes
         - does not take any parameters
         - uses .classlist to toggle dark mode class 
     - Add the function to the button, use onclick method
+    - Use IF ELSE STATE to change innerHTML of button, **google proper syntax 
 */
 
 
