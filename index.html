@@ -19,8 +19,12 @@
                 <li><button type= "button" class="theme-toggle" value="DARK MODE" >DARK MODE</button></li>
             </ul>
         </nav>
-        <nav class="side1" id = "sideMenu">
+        <nav class="side" id = "sideMenu">
             <button class="menu_button" type="button" onclick="openMenu()">>></button>
+            <ul id = "note_nav">
+                <button class='menu_button' type = 'button' onclick = 'closeMenu()'>&lt&lt</button>
+                <li class="mynotes"><a href='#'>my notes</a></li>
+            </ul>
         </nav>
         <div class= "main" id = "noteArea">
             <button id = "addNewNote" type= "button" onclick="openNote()">+ create a new note</button>

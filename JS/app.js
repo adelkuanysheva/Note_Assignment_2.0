@@ -1,3 +1,4 @@
+// Function 1 - Dark Mode 
 
 const btn = document.querySelector('.theme-toggle');
 
@@ -16,6 +17,8 @@ btn.addEventListener('click', function() {
     }
 })
 
+// Function(s) 2 - Create New Note Button
+
 function openNote() {
     document.getElementById("noteArea").innerHTML =
         "<div class = 'note'>"
@@ -26,8 +29,7 @@ function openNote() {
         + "<button type = 'button' id='b2' onclick = 'cancelNote()'>cancel</button></div></div>"
 } 
 
-
-var x = 1;
+var x = 0;
 var noteArray = Array();
 
 function saveNote () {
@@ -35,6 +37,8 @@ function saveNote () {
     x++;
     document.getElementById("noteArea").innerHTML =
     "<button id = 'addNewNote' type= 'button' onclick='openNote()'>+ create a new note</button>"
+
+    updateMenu(x)
 }
   
 function cancelNote() {
@@ -43,13 +47,21 @@ function cancelNote() {
 }
 
 function openMenu() {
-    document.getElementById("sideMenu").innerHTML = 
-    " <div class='note_nav'>"
-    + "<button class='menu_button' type = 'button'>&lt&lt</button>"
-    + "<ul>"
-        + "<li class='mynotes'><a href=''>my notes</a></li>  </ul></div>"
-
+    document.getElementById("note_nav").style.display = "block";
 }
+
+function closeMenu() {
+    document.getElementById("note_nav").style.display = "none";
+}
+
+function updateMenu(x) {
+    document.getElementById("note_nav").innerHTML += 
+    "<li>"
+    + "<a>"
+    + "Note " + x 
+    + "</li>"
+}
+
 
 /* Plans to create functions in Note-ly app. */ 
 

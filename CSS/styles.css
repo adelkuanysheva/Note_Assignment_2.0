@@ -15,6 +15,10 @@ body.darkmode * {
     background-color: #232136;
 }
 
+body.darkmode > div > footer > div > a {
+    background-color: #e0def4;
+    color: #232136;
+}
 
 .container {
     display: grid;
@@ -48,19 +52,9 @@ body.darkmode * {
     flex-direction: row;
 }
 
-.side1 {
+.side {
     grid-area: s;
     padding-left: 10px;
-}
-
-.side2 {
-    grid-area: s;
-    background-color: #6e6a86;
-    text-align: end;
-}
-
-.side2 * {
-    background-color: #6e6a86;
 }
 
 li {
@@ -138,6 +132,7 @@ footer {
     background: #55ACEE;
     color: #e0def4;
 }
+
 
 /* Responsive - Mobile (max 560px) */ 
 
