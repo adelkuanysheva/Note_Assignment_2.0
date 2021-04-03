@@ -1,16 +1,15 @@
-/* Plans to create functions in Note-ly app. */  
-
+/* Plans to create functions in Note-ly app. */ 
 
 
 // Function 1 - Dark Mode
 
-/*  - Change initial color scheme to be "light mode"
-    - Create a .darkmode class selector in CSS that change the color  
-        - this class should also change the button 
+/*  - Create a body.darkmode class selector in CSS that changes the color  
+    - Create a constant for the button by using querySelector 
     - Create a function that toggles between classes
         - does not take any parameters
         - uses .classlist to toggle dark mode class 
     - Add the function to the button, use onclick method
+    - Use IF ELSE STATE to change innerHTML of button, **google proper syntax 
 */
 
 
@@ -18,18 +17,20 @@
 
 /*  Create a function that adds the html from note.html into index.html:
         - function will not take any parameters
-        - It will use .createElement features to add literals
-        - Use template literals to add element of class "note", inside will be:
+        - It will use .getElementbyId feature to add html literals
+        - Add element of class "note", inside will be:
             - label tag, button
             - textarea tag
             - div tag, class "savedelete" - 2 buttons 
     Save button:
-        - use onclick to save the object inputed into a noteArray
-        - object will have a body and title 
-        - push() method 
-        - will undo the function above (remove the "note" class)
+        - use onclick to save the object inputed into a noteArray, **google this
+            - possibly use indexing, noteArray[x] = ... 
+        - object will have a body and title
+            - {Title: Note + x, Body: .. }
+        - replace noteArea with the addNewNote button (original state)
     Delete button:
         - will simply remove the "note" class
+        - replace the noteArea with the addNewNote button 
 */      
 
 
