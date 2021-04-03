@@ -57,6 +57,12 @@ body.darkmode > div > footer > div > a {
     padding-left: 10px;
 }
 
+h1 {
+    font-size: 13px;
+    text-decoration-line: underline;
+    color: #eb6f92;
+}
+
 li {
     list-style-type: none;
     margin-right: 3rem;
@@ -68,7 +74,6 @@ a:visited, a:link, a:active {
 
 .main {
     grid-area: m;
-    padding-left: 20px;
     width: fit-content;
     max-width: 300px;
     display: grid;
@@ -104,6 +109,22 @@ button {
 }
 
 #b2 {
+    color: #eb6f92;
+}
+
+.openedNote {
+    box-sizing: border-box;
+    border: 1px solid #555169;
+    width: 200px;
+    height: 100px;
+    padding: 2px;
+}
+
+.closeButton {
+    text-align: end;
+}
+
+.closeButton > button {
     color: #eb6f92;
 }
 

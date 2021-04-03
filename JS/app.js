@@ -1,4 +1,3 @@
-// Function 1 - Dark Mode 
 
 const btn = document.querySelector('.theme-toggle');
 
@@ -17,8 +16,6 @@ btn.addEventListener('click', function() {
     }
 })
 
-// Function(s) 2 - Create New Note Button
-
 function openNote() {
     document.getElementById("noteArea").innerHTML =
         "<div class = 'note'>"
@@ -29,16 +26,16 @@ function openNote() {
         + "<button type = 'button' id='b2' onclick = 'cancelNote()'>cancel</button></div></div>"
 } 
 
-var x = 0;
+var noteIndex = 0;
 var noteArray = Array();
 
 function saveNote () {
-    noteArray[x] = {Title: "Note " + x,  Body: document.getElementById("story").value};
-    x++;
+    noteArray[noteIndex] = {Title: "Note " + noteIndex,  Body: document.getElementById("story").value};
+    noteIndex++;
     document.getElementById("noteArea").innerHTML =
     "<button id = 'addNewNote' type= 'button' onclick='openNote()'>+ create a new note</button>"
 
-    updateMenu(x)
+    updateMenu(noteIndex)
 }
   
 function cancelNote() {
@@ -54,12 +51,21 @@ function closeMenu() {
     document.getElementById("note_nav").style.display = "none";
 }
 
-function updateMenu(x) {
+function updateMenu(noteIndex) {
     document.getElementById("note_nav").innerHTML += 
     "<li>"
-    + "<a>"
-    + "Note " + x 
+    + "<a href = '#' onclick = openNoteClicked("+ noteIndex + ")> - Note " + noteIndex + "</a>" 
     + "</li>"
+}
+
+function openNoteClicked(noteIndex) {
+
+    document.getElementById("noteArea").innerHTML = 
+    "<div class = 'openedNoteArea'>"
+        + "<div class = 'openedNote'>"
+        + noteArray[noteIndex - 1]["Body"] + "</div>"
+        + "<div class = 'closeButton'>"
+        + "<button type= 'button' onclick='cancelNote()'>close note</button></div></div>"
 }
 
 
