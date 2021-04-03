@@ -3,42 +3,54 @@
 
 // Function 1 - Dark Mode
 
-/*  - Create a body.darkmode class selector in CSS that changes the color  
+/*  - Create a .darkmode class selectors in CSS that changes the color  
     - Create a constant for the button by using querySelector 
-    - Create a function that toggles between classes
+    - Create a function that toggles the .darkmode class
         - does not take any parameters
-        - uses .classlist to toggle dark mode class 
-    - Add the function to the button, use onclick method
-    - Use IF ELSE STATE to change innerHTML of button, **google proper syntax 
+        - uses .classlist.toggle('darkmode') function
+    - Add the function to the button - use onclick method
+    - Use IF ELSE STATE to change innerHTML of button, **google proper syntax
+        - "light mode" when in darkmode, "dark mode" when in light mode
 */
 
 
-// Function 2 - Create New Note Button
+// Function(s) 2 - Create New Note Button
 
-/*  Create a function that adds the html from note.html into index.html:
+/*  Create a function that adds the html elements from note.html (A1) into index.html:
         - function will not take any parameters
-        - It will use .getElementbyId feature to add html literals
+        - It will use .getElementbyId feature to change the .innerHTML
         - Add element of class "note", inside will be:
-            - label tag, button
-            - textarea tag
-            - div tag, class "savedelete" - 2 buttons 
-    Save button:
+            - label tag - non-functioning button from A1 
+            - textarea
+            - div tag, class "savedelete" - with 2 buttons: save & delete
+    Save button function:
         - use onclick to save the object inputed into a noteArray, **google this
             - possibly use indexing, noteArray[x] = ... 
-        - object will have a body and title
+            - probably will have to initialize the first iteration, like i = 0 (outside)
+            - create empty array (outside)
+        - after adding into the specific index, increment by 1.. syntax? 
+        - objects will each have a body and title
             - {Title: Note + x, Body: .. }
-        - replace noteArea with the addNewNote button (original state)
-    Delete button:
+        - replace noteArea with the addNewNote button
+        - original addNewNote button: 
+            - <button id = 'addNewNote' type= 'button' onclick='openNote()'>+ create a new note</button>
+    Cancel button function:
         - will simply remove the "note" class
-        - replace the noteArea with the addNewNote button 
+        - replace the noteArea with the addNewNote button, using .innerHTML (same as save note function)
 */      
 
 
-// Function 3 - Note Title (Side Menu)
+// Function(s) 3 - Note Titles, Update the Side Menu
 
-/*  - Make link <a> tags display the title of each note in the noteArray
-    - Each link with call a function to replace the main area with the body of that note
-    - Close button is added with the createElement function 
-        - This button will use the toggle method to return back to original state
-    
+/*  Update Menu Function:
+        - probably call this function at the end of the Save Note Function
+        - takes the note index variable as a parameter
+        - uses the .innerHTML += function to add an li tag, inside it - a link tag "<a></a>"
+            - the a tag will have the value "Note" + index of saved note
+    Open the Notes Saved:
+        - a tag created in update function will call an onclick function to open the note from the side menu
+        - use getElementbyId to change the .innerHTML of the main section to:
+            - the Body of the note click
+                - array[index]["body"]
+            - close button, this will have an onclick call to the cancel note function since it does what we need
 */
