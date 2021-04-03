@@ -19,11 +19,11 @@
                 <li><button type= "button" class="theme-toggle" value="DARK MODE" >DARK MODE</button></li>
             </ul>
         </nav>
-        <nav class="side1">
-            <button class="menu_button" type="button">>></button>
+        <nav class="side1" id = "sideMenu">
+            <button class="menu_button" type="button" onclick="openMenu()">>></button>
         </nav>
-        <div class= "main">
-            <button type= "button">+ create a new note</button>
+        <div class= "main" id = "noteArea">
+            <button id = "addNewNote" type= "button" onclick="openNote()">+ create a new note</button>
         </div>
         <footer>
             <p>created by Adel Kuanysheva, BCIT Computer Information Technology</p>
