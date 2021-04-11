@@ -3,8 +3,21 @@
     padding: 0;
     font-family: 'Lexend Mega', sans-serif;
     font-size: 10px;
+}
+
+body, button, a {
     color: #232136;
     background-color: #e0def4;
+}
+
+body.darkmode * {
+    color: #e0def4;
+    background-color: #232136;
+}
+
+body.darkmode > div > footer > div > a {
+    background-color: #e0def4;
+    color: #232136;
 }
 
 .container {
@@ -39,19 +52,15 @@
     flex-direction: row;
 }
 
-.side1 {
+.side {
     grid-area: s;
     padding-left: 10px;
 }
 
-.side2 {
-    grid-area: s;
-    background-color: #6e6a86;
-    text-align: end;
-}
-
-.side2 * {
-    background-color: #6e6a86;
+h1 {
+    font-size: 13px;
+    text-decoration-line: underline;
+    color: #eb6f92;
 }
 
 li {
@@ -65,8 +74,8 @@ a:visited, a:link, a:active {
 
 .main {
     grid-area: m;
-    padding-left: 20px;
     width: fit-content;
+    max-width: 300px;
     display: grid;
     grid-template-rows: 0.1fr 1fr;
     grid-template-areas:   
@@ -81,6 +90,7 @@ label {
 
 textarea {
     color: #eb6f92;
+    background-color: #e0def4;
 }
 
 .note * {
@@ -94,10 +104,27 @@ textarea {
 }
 
 button {
+    background-color: Transparent;
     border: none;
 }
 
 #b2 {
+    color: #eb6f92;
+}
+
+.openedNote {
+    box-sizing: border-box;
+    border: 1px solid #555169;
+    width: 200px;
+    height: 100px;
+    padding: 2px;
+}
+
+.closeButton {
+    text-align: end;
+}
+
+.closeButton > button {
     color: #eb6f92;
 }
 
@@ -112,10 +139,8 @@ footer {
 
 .fa {
     padding: 20px;
-    font-size: 50px;
-    width: 20px;
+    width: 14px;
     text-align: center;
-    text-decoration: none;
     border-radius: 50%;
 }
 
@@ -128,6 +153,7 @@ footer {
     background: #55ACEE;
     color: #e0def4;
 }
+
 
 /* Responsive - Mobile (max 560px) */ 
 

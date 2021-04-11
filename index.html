@@ -14,15 +14,20 @@
     <div class = "container" id="c1">
         <nav class="header">
             <ul class="top">
-                <li><a href="">About</a></li>
-                <li><a href="">Docs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><button type= "button" class="theme-toggle" value="DARK MODE" >DARK MODE</button></li>
             </ul>
         </nav>
-        <nav class="side1">
-            <button class="menu_button" type="button">>></button>
+        <nav class="side" id = "sideMenu">
+            <button class="menu_button" type="button" onclick="openMenu()">>></button>
+            <ul id = "note_nav">
+                <button class='menu_button' type = 'button' onclick = 'closeMenu()'>&lt&lt</button>
+                <h1>My Notes:</h1>
+            </ul>
         </nav>
-        <div class= "main">
-            <button type= "button">+ create a new note</button>
+        <div class= "main" id = "noteArea">
+            <button id = "addNewNote" type= "button" onclick="openNote()">+ create a new note</button>
         </div>
         <footer>
             <p>created by Adel Kuanysheva, BCIT Computer Information Technology</p>
